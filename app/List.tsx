@@ -21,6 +21,7 @@ const List = () => {
   }, []);
 
   const addTodo = async () => {
+    console.log("Hello")
     if (todo.trim() !== '') {
       try {
         const newTodoRef = await addDoc(collection(FIRESTORE_DB, 'todos'), { title: todo.trim(), done: false, priority });
