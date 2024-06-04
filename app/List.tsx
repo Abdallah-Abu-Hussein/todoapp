@@ -10,6 +10,7 @@ const List = () => {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState('');
   const [priority, setPriority] = useState('low');
+  console.log("testing")
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(FIRESTORE_DB, 'todos'), (snapshot) => {
